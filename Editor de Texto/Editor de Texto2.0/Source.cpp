@@ -19,7 +19,9 @@ public:
 			<< "Ingresa un numero para lo que quieras hacer: \n"
 			<< "1.Crear un archivo.\n"
 			<< "2.Leer un archivo.\n"
-			<< "3.Modificar archivo.\n";
+			<< "3.Modificar archivo.\n"
+			<< "4.Para cerrar el programa.\n";
+
 		int eleccion, *P_numero;			//Puntero
 		cin >> eleccion;
 		P_numero = &eleccion;
@@ -31,7 +33,14 @@ public:
 		case 2:
 			Leer_Archivo();
 			break;
-		case 3: Modificar_archivo();
+		case 3: 
+			Modificar_archivo();
+			break;
+		case 4:
+			system("cls");
+			cout << "Hasta luego.\n";
+			Sleep(2000);
+			exit(1);
 		default:
 			cout << "Esa opcion no esta disponible, seras devuelto al menu.\n";
 			menu();
